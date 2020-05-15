@@ -16,7 +16,7 @@ names(features) <- c("indicator", "feature")
 ##################################################################################
 ## 1.) Merges the training and the test sets to create one data set
 ## TRAINING SET ##################################################################
-## read local files of training set
+## read local files of training set and set column names
 trainingSubject <- read.table("./data/train/subject_train.txt")
 names(trainingSubject) <- c("subject")
 trainingActivity <- read.table("./data/train/y_train.txt")
@@ -28,7 +28,7 @@ names(trainingData) <- features$feature
 trainingData <- cbind(trainingSubject, trainingActivity, trainingData)
 
 ## TEST SET #######################
-## read local files of training set
+## read local files of training set and set column names
 testSubject <- read.table("./data/test/subject_test.txt")
 names(testSubject) <- c("subject")
 testActivity <- read.table("./data/test/y_test.txt")
@@ -68,4 +68,4 @@ dataMelt <- melt(experimentData3, id = c("subject", "activityName"), measure.var
 avgData <- as.table(acast(dataMelt, activityName ~ subject ~ variable, mean))
 
 ## write the table
-write.table(avgData, file = "./cleaning_analysis.txt")
+write.table(avgData, file = "./result/averages.txt", col.names = c("activity", "subject", "feature", "average"))
