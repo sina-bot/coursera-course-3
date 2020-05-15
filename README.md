@@ -45,7 +45,7 @@ variable    | explanation
 _acitivity_ | name of the measured activity
 _subject_   | number of the subject that performed the activity
 _feature_   | name of the measure 
--average_   | average of the variable measured for the activity and subject
+_average_   | average of the variable measured for the activity and subject
 
 ***
 

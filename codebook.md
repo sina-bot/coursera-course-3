@@ -1,10 +1,3 @@
----
-title: 'Code Book: Getting and Cleaning Data Course Project'
-author: "Sina"
-date: "15 5 2020"
-output: html_document
----
-
 The tidy data set `averages.txt` contains the following variables and values:
 
 ## activity
