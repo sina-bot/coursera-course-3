@@ -68,4 +68,4 @@ dataMelt <- melt(experimentData3, id = c("subject", "activityName"), measure.var
 avgData <- as.table(acast(dataMelt, activityName ~ subject ~ variable, mean))
 
 ## write the table
-write.table(avgData, file = "./result/averages.txt", col.names = c("activity", "subject", "feature", "average"))
+write.table(avgData, file = "./result/averages.txt", row.names = FALSE, col.names = c("activity", "subject", "feature", "average"))
