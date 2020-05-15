@@ -39,6 +39,9 @@ The data set is _tidy_, because
 * since there are no multiple tables, no link is needed
 
 The data set contains the following variables:
+
+variable    | explanation
+------------|---------------------------------------
 _acitivity_ | name of the measured activity
 _subject_   | number of the subject that performed the activity
 _feature_   | name of the measure 
